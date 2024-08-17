@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person 1 - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="person1.html">Person 1</a></li>
+            <li><a href="person2.html">Person 2</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Jefferson Tabisola</h1>
+        <div class="work-gallery">
+            <div class="work-item" onclick="toggleExpand('aboutMe')">
+                <img src="jeff1.jpg" alt="About Me">
+                <h3>About Me</h3>
+                <p>Click to learn more about me.</p>
+                <div id="aboutMe" class="expandable-content">
+                    <p>Hey there! I'm Jefferson Valerozo Tabisola, A.K.A "Maxwell Harrington" born on June 12, 2004, in the province of Isabela, Philippines. My parents, Jennifer Tabisola and Sonia Valerozo, have always been my biggest supporters.</p>
+                    <p>I started my education at Doña Concha Elementary School and later moved on to Monico Rarama National High School. Right now, I’m studying at Isabela State University, Roxas Campus, working towards a Bachelor of Science in Information Technology. I’m also an NC2 passer in Organic and Agriculture Production under TESDA—something I’m really proud of!</p>
+                    <p>When I’m not hitting the books, you’ll find me either coding or working on music. I love creating song covers and sharing them on Spotify—it’s a cool mix of my love for tech and music. I’m also a bit of an adventurer, always on the lookout for new experiences.</p>
+                    <p>That’s a bit about me. I’m all about balancing my creative side with my tech skills, and I’m excited to see where life takes me next!</p>
+                </div>
+            </div>
+            <div class="work-item" onclick="toggleExpand('contacts')">
+                <img src="contact.jpg" alt="Contacts">
+                <h3>Contacts</h3>
+                <p>Click to view my contact information.</p>
+                <div id="contacts" class="expandable-content">
+                    <p>Email: <a href="mailto:jefftabisola@gmail.com">jefftabisola@gmail.com</a></p>
+                    <p>Facebook: <a href="https://www.facebook.com/profile.php?id=100076905375575&mibextid=ZbWKwL" target="_blank">Maxwell Harrington</a></p>
+                    <p>Instagram: <a href="https://www.instagram.com/Macqssy" target="_blank">@Macqssy</a></p>
+                    <p>Snapchat: <a href="https://www.snapchat.com/add/Harringtonmax" target="_blank">Harringtonmax</a></p>
+                    <p>Spotify: <a href="https://open.spotify.com/artist/50mvclbczrc889sHapLrQ2" target="_blank">Jefferson Tabisola</a></p>
+                </div>
+                
+            </div>
+            <div class="work-item" onclick="toggleExpand('personalInfo')">
+                <img src="maxmodel.jpg" alt="Personal Info">
+                <h3>Personal Info</h3>
+                <p>Click to view my personal information.</p>
+                <div id="personalInfo" class="expandable-content">
+                    <p>Name: Jefferson Valerozo Tabisola</p>
+                    <p>Nickname: Jeff / Maxwell</p>
+                    <p>Born: June 12, 2004 in the Province of Isabela</p>
+                    <p>Educational Background: Isabela State University Roxas Campus (Under Graduate)</p>
+                    <p>Age: 20 Years Old</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Jefferson Tabisola. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=100076905375575&mibextid=ZbWKwL" target="_blank">Facebook</a> |
+                <a href="https://www.instagram.com/Macqssy" target="_blank">Instagram</a> |
+                <a href="https://www.snapchat.com/add/Harringtonmax" target="_blank">Snapchat</a> |
+                <a href="https://open.spotify.com/artist/50mvclbczrc889sHapLrQ2" target="_blank">Spotify</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleExpand(id) {
+            const content = document.getElementById(id);
+            const allContents = document.querySelectorAll('.expandable-content');
+
+            // Close all other expandable contents
+            allContents.forEach((section) => {
+                if (section !== content) {
+                    section.classList.remove('expanded');
+                }
+            });
+
+            // Toggle the selected content
+            content.classList.toggle('expanded');
+        }
+    </script>
+</body>
+</html>
